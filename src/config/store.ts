@@ -3,8 +3,8 @@ export const store = {
   name: "GIFTLY",
   logo: null as string | null,
   email: "hello@giftly.example",
-  telegram: "" as string, // Укажите username продавца без @. Пустое значение блокирует переход.
-  socials: [] as { label: string; url: string }[],
+  telegram: "bebebebebra" as string, // Укажите username продавца без @. Пустое значение блокирует переход.
+  socials: [{ label: "Telegram", url: "https://t.me/bebebebebra" }] as { label: string; url: string }[],
   palette: {
     background: "#F8F6F2",
     paper: "#F0EBE3",

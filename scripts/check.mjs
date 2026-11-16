@@ -41,7 +41,7 @@ delete globalThis.localStorage;
 const order = orderText({ "slow-morning": 2, "quiet-evening": 1 });
 assert.match(order, /1\. Медленное утро — 2 шт\./);
 assert.match(order, /Итого: 13\s700 ₽/);
-assert.equal(store.telegram, "");
+assert.match(store.telegram, /^[a-zA-Z][a-zA-Z0-9_]{4,31}$/);
 for (const p of products) {
   assert.ok(p.price > 0 && p.contents.length >= 3);
   assert.ok((await readFile("public" + p.image)).length > 1000);
@@ -142,7 +142,7 @@ assert.match(d.querySelector(".subtotal").textContent, /9\s800/);
 await click(button("Скопировать заказ"));
 assert.match(copied, /Медленное утро — 2 шт\./);
 assert.match(d.querySelector(".copy-status").textContent, /вставьте/);
-assert.ok(!d.querySelector('a[href^="https://t.me/"]'));
+assert.equal(d.querySelector('.checkout a[href^="https://t.me/"]')?.getAttribute("href"), `https://t.me/${store.telegram}`);
 await click(d.querySelector('[aria-label="Удалить «Медленное утро»"]'));
 assert.match(d.querySelector(".empty").textContent, /Пока здесь тихо/);
 w.dispatchEvent(
@@ -152,6 +152,7 @@ d.dispatchEvent(
   new w.KeyboardEvent("keydown", { key: "Escape", bubbles: true }),
 );
 await new Promise((r) => setTimeout(r, 450));
+for (let i=0; i<30 && d.querySelector('[role="dialog"]'); i++) await new Promise(r=>setTimeout(r,100));
 assert.ok(!d.querySelector('[role="dialog"]'));
 await click(d.querySelector(".product-visual a"));
 assert.ok(d.querySelector(".product-detail"));
@@ -166,7 +167,7 @@ await click(button("Скопировать заказ"));
 assert.ok(d.querySelector("textarea[readonly]"));
 assert.match(d.querySelector("textarea").value, /Медленное утро/);
 console.log(
-  "PASS: rendered catalog, combined filters/reset, product routing, add, quantity, total, clipboard, missing Telegram guard, remove, empty cart, Escape and localStorage writes.",
+  "PASS: rendered catalog, combined filters/reset, product routing, add, quantity, total, clipboard, configured Telegram link, remove, empty cart, Escape and localStorage writes.",
 );
 assert.deepEqual(errors, []);
 console.log("PASS: no React/runtime errors in DOM checks.");
