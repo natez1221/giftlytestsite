@@ -115,11 +115,11 @@ section[id] {
   justify-content: center;
   align-items: center;
   gap: 24px;
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.04em;
 }
 .announcement span {
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.18em;
   color: var(--brown);
   border-left: 1px solid #c9bfb3;
@@ -150,7 +150,7 @@ section[id] {
   object-fit: contain;
 }
 .logo span {
-  font-size: 7px;
+  font-size: 12px;
   letter-spacing: 0.28em;
   margin-top: 8px;
   margin-left: 3px;
@@ -158,7 +158,7 @@ section[id] {
 .desktop-nav {
   display: flex;
   gap: 34px;
-  font-size: 11px;
+  font-size: 12px;
 }
 .desktop-nav a {
   position: relative;
@@ -184,7 +184,7 @@ section[id] {
   gap: 28px;
 }
 .header-note {
-  font-size: 10px;
+  font-size: 12px;
   color: var(--muted);
 }
 .icon-button {
@@ -200,14 +200,14 @@ section[id] {
   padding: 0;
 }
 .bag span {
-  font-size: 11px;
+  font-size: 12px;
 }
 .mobile-toggle,
 .mobile-nav {
   display: none;
 }
 .eyebrow {
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 0.19em;
   font-weight: 600;
   line-height: 1.7;
@@ -226,7 +226,7 @@ section[id] {
   justify-content: space-between;
 }
 .hero .eyebrow {
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.18em;
   margin-bottom: 35px;
 }
@@ -258,7 +258,7 @@ section[id] {
   align-items: center;
   min-height: 52px;
   padding: 16px 25px;
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.025em;
   transition:
     background 0.2s,
@@ -284,14 +284,14 @@ section[id] {
   justify-content: space-between;
   align-items: end;
   margin-top: 50px;
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.1em;
   line-height: 1.8;
   color: var(--muted);
   max-width: 90%;
 }
 .hero-index {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.06em;
   color: var(--ink);
 }
@@ -358,7 +358,7 @@ section[id] {
   right: -27px;
   top: 50%;
   writing-mode: vertical-rl;
-  font-size: 7px;
+  font-size: 12px;
   letter-spacing: 0.22em;
 }
 .values-line {
@@ -367,13 +367,13 @@ section[id] {
   justify-content: space-around;
   border-bottom: 1px solid var(--line);
   padding: 27px 5.2%;
-  font-size: 10px;
+  font-size: 12px;
   color: #67615b;
 }
 .values-line i {
   font-style: normal;
   color: var(--brown);
-  font-size: 11px;
+  font-size: 12px;
 }
 .section {
   padding: 100px 5.2%;
@@ -392,7 +392,7 @@ section[id] {
   display: inline-flex;
   gap: 30px;
   align-items: center;
-  font-size: 11px;
+  font-size: 12px;
   padding: 12px 0;
   border-bottom: 1px solid var(--brown);
   transition: gap 0.2s;
@@ -438,7 +438,7 @@ section[id] {
   position: absolute;
   top: 17px;
   left: 16px;
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.04em;
   background: var(--background);
   padding: 7px 11px;
@@ -465,7 +465,7 @@ section[id] {
   bottom: 17px;
   left: 17px;
   color: white;
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.1em;
   text-shadow: 0 1px 8px #222;
 }
@@ -480,17 +480,17 @@ section[id] {
   font-size: 28px;
 }
 .product-caption p {
-  font-size: 9px;
+  font-size: 12px;
   color: var(--muted);
   margin-top: 7px;
 }
 .price {
   white-space: nowrap;
-  font-size: 11px;
+  font-size: 12px;
   padding-top: 8px;
 }
 .demo-note {
-  font-size: 9px;
+  font-size: 12px;
   color: var(--muted);
   line-height: 1.8;
   margin-top: 28px;
@@ -519,7 +519,7 @@ section[id] {
   position: absolute;
   bottom: 22px;
   left: 24px;
-  font-size: 7px;
+  font-size: 12px;
   letter-spacing: 0.14em;
   background: var(--background);
   padding: 9px 14px;
@@ -631,7 +631,7 @@ section[id] {
   margin: 28px 0;
 }
 .giving-copy .small-copy {
-  font-size: 10px !important;
+  font-size: 12px !important;
 }
 .giving-photo {
   position: relative;
@@ -647,7 +647,7 @@ section[id] {
   border-bottom: 1px solid var(--line);
 }
 .how .section-heading > p {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--muted);
 }
 .steps {
@@ -670,7 +670,7 @@ section[id] {
   font-size: 28px;
 }
 .steps p {
-  font-size: 11px;
+  font-size: 12px;
   color: #6c675f;
   margin-top: 14px;
   max-width: 290px;
@@ -704,7 +704,7 @@ footer {
   font-weight: 400;
 }
 .footer-top > div > p:not(.eyebrow) {
-  font-size: 10px;
+  font-size: 12px;
   color: #bcb7ae;
   margin-top: 16px;
 }
@@ -713,10 +713,10 @@ footer {
   flex-direction: column;
   gap: 18px;
   padding-top: 12px;
-  font-size: 11px;
+  font-size: 12px;
 }
 .footer-top .eyebrow {
-  font-size: 8px;
+  font-size: 12px;
   color: #bcb7ae;
   margin-top: 12px;
   margin-bottom: 20px;
@@ -725,7 +725,7 @@ footer {
   font-size: 12px;
 }
 .footer-top .footer-demo {
-  font-size: 9px !important;
+  font-size: 12px !important;
   color: #aba69e !important;
 }
 .social {
@@ -738,13 +738,13 @@ footer {
   gap: 24px;
   justify-content: space-between;
   padding-top: 23px;
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.035em;
   color: #bcb7ae;
 }
 .footer-bottom span:last-child {
   letter-spacing: 0.17em;
-  font-size: 7px;
+  font-size: 12px;
 }
 .catalog {
   min-height: 70vh;
@@ -763,7 +763,7 @@ footer {
   font-size: clamp(55px, 5.7vw, 85px);
 }
 .catalog-title p {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--muted);
 }
 .filters {
@@ -781,7 +781,7 @@ footer {
   flex-wrap: wrap;
 }
 .categories button {
-  font-size: 11px;
+  font-size: 12px;
   padding: 10px 0;
   color: var(--muted);
   border-bottom: 1px solid transparent;
@@ -792,7 +792,7 @@ footer {
   color: var(--ink);
 }
 .categories sup {
-  font-size: 7px;
+  font-size: 12px;
   margin-left: 5px;
 }
 .selects {
@@ -802,7 +802,7 @@ footer {
 .selects label {
   display: flex;
   flex-direction: column;
-  font-size: 8px;
+  font-size: 12px;
   gap: 4px;
   color: var(--muted);
 }
@@ -812,7 +812,7 @@ select {
   border-radius: 0;
   color: var(--ink);
   padding: 7px 18px 7px 0;
-  font-size: 11px;
+  font-size: 12px;
   min-height: 35px;
   max-width: 155px;
 }
@@ -820,11 +820,11 @@ select {
   display: flex;
   justify-content: space-between;
   margin: 25px 0;
-  font-size: 9px;
+  font-size: 12px;
   color: var(--muted);
 }
 .catalog-meta span:last-child {
-  font-size: 7px;
+  font-size: 12px;
   letter-spacing: 0.15em;
 }
 .catalog-grid {
@@ -920,7 +920,7 @@ select {
 .quantity span {
   width: 24px;
   text-align: center;
-  font-size: 11px;
+  font-size: 12px;
 }
 .detail-purchase .quantity {
   height: 52px;
@@ -938,7 +938,7 @@ select {
   margin: 17px 0 0;
 }
 .contents li {
-  font-size: 11px;
+  font-size: 12px;
   color: #6c675f;
   padding: 5px 0;
   display: flex;
@@ -956,7 +956,7 @@ details {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   padding: 17px 0;
-  font-size: 11px;
+  font-size: 12px;
 }
 summary {
   cursor: pointer;
@@ -1005,7 +1005,7 @@ details p {
   margin-top: 10px;
 }
 .cart-heading .eyebrow {
-  font-size: 8px;
+  font-size: 12px;
 }
 .cart-items {
   flex: 1;
@@ -1028,7 +1028,7 @@ details p {
   margin-top: 3px;
 }
 .cart-item > div > span {
-  font-size: 10px;
+  font-size: 12px;
   color: var(--muted);
   display: block;
   margin: 7px 0 11px;
@@ -1054,7 +1054,7 @@ details p {
 .cart-item-right > span {
   white-space: nowrap;
   color: var(--ink) !important;
-  font-size: 11px !important;
+  font-size: 12px !important;
 }
 .cart-item-right .icon-button {
   min-width: 32px;
@@ -1075,7 +1075,7 @@ details p {
   font-size: 23px;
 }
 .checkout > p {
-  font-size: 10px;
+  font-size: 12px;
   color: var(--muted);
   margin-top: 12px;
 }
@@ -1093,7 +1093,7 @@ details p {
   background: var(--paper);
 }
 .telegram-unset {
-  font-size: 10px;
+  font-size: 12px;
   background: var(--paper);
   padding: 14px 17px;
   margin-top: 15px;
@@ -1107,7 +1107,7 @@ details p {
   padding: 12px;
   border: 1px solid var(--line);
   background: var(--paper);
-  font-size: 11px;
+  font-size: 12px;
   margin-top: 14px;
   resize: vertical;
 }
@@ -1127,7 +1127,7 @@ details p {
   display: flex;
   align-items: center;
   gap: 14px;
-  font-size: 11px;
+  font-size: 12px;
   box-shadow: 0 5px 20px #24242420;
 }
 .toast button {
@@ -1135,7 +1135,7 @@ details p {
   gap: 8px;
   align-items: center;
   color: #e4c6ae;
-  font-size: 10px;
+  font-size: 12px;
   margin-left: 12px;
   padding: 8px 0;
 }
@@ -1145,7 +1145,7 @@ details p {
   left: 0;
   right: 0;
   background: var(--paper);
-  font-size: 10px;
+  font-size: 12px;
   text-align: center;
   padding: 7px;
   z-index: 120;
@@ -1205,14 +1205,14 @@ details p {
     font-size: 7.2vw;
   }
   .hero .eyebrow {
-    font-size: 7px;
+    font-size: 12px;
     letter-spacing: 0.1em;
   }
   .hero-side {
     right: -22px;
   }
   .hero-description {
-    font-size: 11px;
+    font-size: 12px;
     max-width: 220px;
   }
   .hero .button {
@@ -1274,7 +1274,7 @@ details p {
     font-size: 13px;
   }
   .announcement {
-    font-size: 8px;
+    font-size: 12px;
     min-height: 29px;
     padding: 4px 10px;
   }
@@ -1289,7 +1289,7 @@ details p {
     font-size: 29px;
   }
   .logo span {
-    font-size: 6px;
+    font-size: 12px;
     margin-top: 6px;
   }
   .desktop-nav {
@@ -1305,7 +1305,7 @@ details p {
     gap: 6px;
   }
   .bag span {
-    font-size: 10px;
+    font-size: 12px;
   }
   .mobile-nav {
     position: absolute;
@@ -1335,7 +1335,7 @@ details p {
     padding: 45px 6% 32px;
   }
   .hero .eyebrow {
-    font-size: 7px;
+    font-size: 12px;
     letter-spacing: 0.16em;
     margin-bottom: 23px;
   }
@@ -1346,7 +1346,7 @@ details p {
     letter-spacing: -0.04em;
   }
   .hero-description {
-    font-size: 11px;
+    font-size: 12px;
     max-width: 240px;
     margin-top: 20px;
   }
@@ -1384,14 +1384,14 @@ details p {
     font-size: 35px;
   }
   .seal span {
-    font-size: 5px;
+    font-size: 12px;
   }
   .values-line {
     padding: 23px 6%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 14px 20px;
-    font-size: 9px;
+    font-size: 12px;
   }
   .values-line i {
     display: none;
@@ -1410,11 +1410,11 @@ details p {
     font-size: 42px;
   }
   .section-heading .eyebrow {
-    font-size: 7px;
+    font-size: 12px;
     margin-bottom: 14px;
   }
   .section-heading > .text-link {
-    font-size: 9px;
+    font-size: 12px;
     gap: 8px;
     white-space: nowrap;
     margin-top: 38px;
@@ -1453,17 +1453,17 @@ details p {
     padding-top: 14px;
   }
   .product-caption p {
-    font-size: 8px;
+    font-size: 12px;
     line-height: 1.65;
     margin-top: 5px;
   }
   .product-caption .price {
-    font-size: 10px;
+    font-size: 12px;
   }
   .tag {
     top: 10px;
     left: 10px;
-    font-size: 7px;
+    font-size: 12px;
     padding: 6px 8px;
   }
   .quick-add {
@@ -1473,13 +1473,13 @@ details p {
     right: 10px;
   }
   .product-number {
-    font-size: 8px;
+    font-size: 12px;
     left: 11px;
     bottom: 12px;
   }
   .curated > .demo-note {
     text-align: left;
-    font-size: 8px;
+    font-size: 12px;
   }
   .story {
     display: flex;
@@ -1501,12 +1501,12 @@ details p {
     margin-bottom: 20px;
   }
   .story-copy .eyebrow {
-    font-size: 8px;
+    font-size: 12px;
     margin-bottom: 20px;
   }
   .story-copy > p:not(.eyebrow) {
     max-width: none;
-    font-size: 11px;
+    font-size: 12px;
   }
   .signature {
     margin-top: 28px;
@@ -1518,7 +1518,7 @@ details p {
     font-size: 43px;
   }
   .occasion .eyebrow {
-    font-size: 7px;
+    font-size: 12px;
     margin-bottom: 20px;
   }
   .occasion-links {
@@ -1539,11 +1539,11 @@ details p {
     font-size: 52px;
   }
   .giving-copy .eyebrow {
-    font-size: 8px;
+    font-size: 12px;
     margin-bottom: 20px;
   }
   .giving-copy > p:not(.eyebrow) {
-    font-size: 11px;
+    font-size: 12px;
     max-width: 330px;
   }
   .giving-photo {
@@ -1558,7 +1558,7 @@ details p {
   }
   .how .section-heading > p {
     margin-top: 20px;
-    font-size: 10px;
+    font-size: 12px;
   }
   .how .section-heading > p br {
     display: none;
@@ -1588,14 +1588,14 @@ details p {
   }
   .steps p {
     margin-top: 10px;
-    font-size: 10px;
+    font-size: 12px;
     max-width: none;
   }
   .last-word {
     padding: 65px 6%;
   }
   .last-word .eyebrow {
-    font-size: 7px;
+    font-size: 12px;
     letter-spacing: 0.1em;
   }
   .last-word h2 {
@@ -1618,21 +1618,21 @@ details p {
   }
   .footer-links {
     gap: 16px;
-    font-size: 10px;
+    font-size: 12px;
   }
   .footer-top .eyebrow {
-    font-size: 7px;
+    font-size: 12px;
     letter-spacing: 0.1em;
   }
   .footer-top > div > a:not(.footer-logo) {
-    font-size: 10px;
+    font-size: 12px;
     overflow-wrap: anywhere;
   }
   .footer-bottom {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    font-size: 7px;
+    font-size: 12px;
   }
   .footer-bottom span:last-child {
     display: none;
@@ -1650,13 +1650,13 @@ details p {
   }
   .catalog-title p {
     margin-top: 20px;
-    font-size: 10px;
+    font-size: 12px;
   }
   .categories {
     gap: 10px 20px;
   }
   .categories button {
-    font-size: 10px;
+    font-size: 12px;
   }
   .filters {
     gap: 12px;
@@ -1666,10 +1666,10 @@ details p {
     gap: 10px;
   }
   select {
-    font-size: 10px;
+    font-size: 12px;
   }
   .catalog-meta {
-    font-size: 8px;
+    font-size: 12px;
     margin: 20px 0;
   }
   .catalog-meta span:last-child {
@@ -1691,14 +1691,14 @@ details p {
   .catalog-grid .price {
     display: block;
     margin-top: 8px;
-    font-size: 10px;
+    font-size: 12px;
   }
   .product-page {
     padding-top: 25px;
   }
   .back {
     margin-bottom: 20px;
-    font-size: 10px;
+    font-size: 12px;
   }
   .product-detail {
     display: block;
@@ -1713,7 +1713,7 @@ details p {
     font-size: 58px;
   }
   .detail-copy .eyebrow {
-    font-size: 8px;
+    font-size: 12px;
   }
   .detail-price {
     margin: 18px 0;
@@ -1755,7 +1755,7 @@ details p {
     font-size: 39px;
   }
   .cart-heading .eyebrow {
-    font-size: 7px;
+    font-size: 12px;
   }
   .cart-item {
     gap: 12px;
@@ -1769,7 +1769,7 @@ details p {
     font-size: 24px;
   }
   .cart-item-right > span {
-    font-size: 10px !important;
+    font-size: 12px !important;
   }
   .checkout {
     padding-top: 20px;
@@ -1780,16 +1780,16 @@ details p {
   .toast {
     padding: 12px 14px;
     gap: 8px;
-    font-size: 9px;
+    font-size: 12px;
     flex-wrap: wrap;
     justify-content: center;
   }
   .toast button {
-    font-size: 9px;
+    font-size: 12px;
     margin-left: 6px;
   }
   .demo-note {
-    font-size: 8px;
+    font-size: 12px;
   }
   .cart-items {
     flex-shrink: 0;
@@ -1848,4 +1848,33 @@ details p {
   .cart-item > div {
     min-width: 0;
   }
+}
+
+/* Readable commerce copy and resilient layouts on small screens. */
+.hero-description,.story-copy>p:not(.eyebrow),.giving-copy>p:not(.eyebrow),.steps p,.catalog-title p,.detail-copy>p:not(.eyebrow):not(.detail-price):not(.demo-note),.empty p{font-size:14px;line-height:1.8}
+.product-caption p,.demo-note,.checkout>p,.telegram-unset,.footer-top>div>p:not(.eyebrow),.contents li,details{font-size:12px;line-height:1.8}
+.price,.categories button,select,.text-link,.button,.desktop-nav,.footer-links{font-size:13px}
+.catalog-title,.section-heading,.product-caption{min-width:0}
+.product-caption>div,.detail-copy{min-width:0}
+.checkout textarea{font-size:14px}
+@media(max-width:700px){
+ .announcement{height:44px;min-height:44px;text-align:center;line-height:1.4}
+ .mobile-nav{top:auto}
+ .logo span{font-size:9px}
+ .hero .eyebrow{font-size:11px;line-height:1.7}
+ .section-heading{flex-wrap:wrap}
+ .section-heading>.text-link{margin-top:0;font-size:13px}
+ .hero h1{font-size:clamp(54px,10.8vw,76px)}
+ .catalog-grid .product-caption h3,.product-caption h3{font-size:25px;overflow-wrap:anywhere}
+ .catalog-grid .price,.product-caption .price,.cart-item-right>span{font-size:13px!important}
+ .product-caption p{font-size:12px}
+ .detail-purchase{align-items:stretch}
+ .detail-purchase .button{font-size:13px;min-width:0}
+ .cart-item{display:grid;grid-template-columns:68px minmax(0,1fr);gap:12px}
+ .cart-item>a{width:68px;height:96px;grid-column:1;grid-row:1/3}
+ .cart-item>div:nth-child(2){grid-column:2}
+ .cart-item-right{grid-column:2;flex-direction:row-reverse;align-items:center;justify-content:space-between;margin-left:0}
+ .cart-item h3{font-size:25px}
+ .footer-top{grid-template-columns:1fr;gap:25px}
+ .footer-bottom{font-size:12px;line-height:1.7}
 }

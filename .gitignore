@@ -3,3 +3,5 @@ dist/
 work-preview/
 *.tsbuildinfo
 .env*
+
+/node_modules
