@@ -10,7 +10,7 @@
 git clone giftly-history.bundle giftly
 cd giftly
 git remote rename origin recovery
-git remote add origin https://github.com/YOUR_ACCOUNT/giftly.git
+git remote add origin https://github.com/natez1221/giftlytestsite.git
 git push -u origin main
 npm ci
 npm run dev

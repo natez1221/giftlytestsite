@@ -120,6 +120,19 @@ d.dispatchEvent(
 await new Promise((r) => setTimeout(r, 400));
 assert.ok(!d.querySelector(".mobile-nav"));
 assert.equal(d.querySelectorAll(".catalog-grid .product-card").length, 8);
+const sort = d.querySelectorAll("select")[1];
+for (const direction of ["asc", "desc"]) {
+  sort.value = direction;
+  sort.dispatchEvent(new w.Event("change", { bubbles: true }));
+  await wait();
+  const prices = [...d.querySelectorAll(".catalog-grid .price")].map(el =>
+    Number(el.textContent.replace(/\D/g, "")));
+  assert.equal(prices.length, 8);
+  assert.deepEqual(prices, [...prices].sort((a, b) => direction === "asc" ? a-b : b-a));
+}
+sort.value = "default";
+sort.dispatchEvent(new w.Event("change", { bubbles: true }));
+await wait();
 await click(button("Для неё"));
 assert.equal(d.querySelectorAll(".catalog-grid .product-card").length, 2);
 const price = d.querySelector("select");
@@ -136,7 +149,15 @@ assert.deepEqual(JSON.parse(w.localStorage.getItem("giftly-cart-v1")), {
   "slow-morning": 1,
 });
 await click(d.querySelector('[aria-label^="Открыть корзину"]'));
-assert.ok(d.querySelector('[role="dialog"]'));
+const dialog = d.querySelector('[role="dialog"]');
+assert.ok(dialog);
+assert.equal(d.activeElement, dialog);
+const focusable = dialog.querySelectorAll("button:not([disabled]),a[href],textarea");
+focusable[focusable.length - 1].focus();
+d.dispatchEvent(new w.KeyboardEvent("keydown", {key: "Tab", bubbles: true, cancelable: true}));
+assert.equal(d.activeElement, focusable[0]);
+d.dispatchEvent(new w.KeyboardEvent("keydown", {key: "Tab", shiftKey: true, bubbles: true, cancelable: true}));
+assert.equal(d.activeElement, focusable[focusable.length - 1]);
 await click(d.querySelector('[aria-label="Увеличить количество"]'));
 assert.match(d.querySelector(".subtotal").textContent, /9\s800/);
 await click(button("Скопировать заказ"));
@@ -169,6 +190,31 @@ assert.match(d.querySelector("textarea").value, /Медленное утро/);
 console.log(
   "PASS: rendered catalog, combined filters/reset, product routing, add, quantity, total, clipboard, configured Telegram link, remove, empty cart, Escape and localStorage writes.",
 );
+// Saved quantities must hydrate a fresh application instance.
+const savedCart = w.localStorage.getItem("giftly-cart-v1");
+dom.window.close();
+const restored = new JSDOM('<div id="root"></div>', {
+  url: "https://giftly.test/#/catalog", runScripts: "outside-only",
+  pretendToBeVisual: true, virtualConsole: vc,
+});
+const rw = restored.window;
+rw.scrollTo = () => {};
+rw.HTMLElement.prototype.scrollIntoView = () => {};
+rw.matchMedia = w.matchMedia;
+rw.IntersectionObserver = w.IntersectionObserver;
+rw.localStorage.setItem("giftly-cart-v1", savedCart);
+rw.eval(code);
+await new Promise(r => setTimeout(r, 1000));
+assert.match(restored.window.document.querySelector('[aria-label^="Открыть корзину"]').getAttribute("aria-label"), /1$/);
+// Invalid percent encoding in an anchor must not crash route effects.
+rw.location.hash = "#/%";
+await wait();
+assert.ok(rw.document.querySelector("main"));
+rw.location.hash = "#/#%";
+await wait();
+assert.ok(rw.document.querySelector("main"));
+restored.window.close();
+console.log("PASS: ascending/descending sort, keyboard focus trap, persisted cart hydration, malformed URL anchor.");
 assert.deepEqual(errors, []);
 console.log("PASS: no React/runtime errors in DOM checks.");
 dom.window.close();

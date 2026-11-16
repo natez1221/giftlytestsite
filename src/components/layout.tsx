@@ -125,9 +125,15 @@ export function ScrollManager() {
   const location = useLocation();
   useEffect(() => {
     if (location.hash) {
+      let anchor = location.hash.slice(1);
+      try {
+        anchor = decodeURIComponent(anchor);
+      } catch {
+        // A malformed fragment must not interrupt navigation.
+      }
       requestAnimationFrame(() =>
         document
-          .getElementById(decodeURIComponent(location.hash.slice(1)))
+          .getElementById(anchor)
           ?.scrollIntoView({
             behavior: window.matchMedia("(prefers-reduced-motion: reduce)")
               .matches
