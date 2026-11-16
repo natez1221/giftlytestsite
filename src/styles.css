@@ -1878,3 +1878,12 @@ details p {
  .footer-top{grid-template-columns:1fr;gap:25px}
  .footer-bottom{font-size:12px;line-height:1.7}
 }
+
+/* Keep checkout reachable above mobile browser chrome and device safe areas. */
+.cart-drawer { overscroll-behavior: contain; }
+@media (max-width: 700px) {
+  .cart-drawer { padding-bottom: max(24px, env(safe-area-inset-bottom)); }
+  .checkout textarea, .selects select { font-size: 16px; }
+  .selects label { min-width: 0; }
+  .selects select { max-width: 100%; }
+}
